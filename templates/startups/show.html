@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ startup.name }}</title>
+</head>
+<body>
+<h1>{{ startup.name }}</h1>
+<ul>
+    {% for founder in founders: %}
+        <li>{{ founder.name }}: {{ founder.bio }}</li>
+        <a href="/{{ startup.id }}/founders/{{ founder.id }}/edit"> edit</a>
+        <a href="/{{ startup.id }}/founders/{{ founder.id }}/delete"> delete </a>
+    {% endfor %}
+</ul>
+<br>
+<form method='POST' enctype='multipart/form-data' action='/{{ startup.id }}/founders/new'>
+    <label> Founder Name</label>
+    <input type='text' name='name'/>
+    <label> Bio </label>
+    <input type='text' name='bio'/>
+    <button type='submit'> Add Founder</button>
+</form>
+</body>
+</html>

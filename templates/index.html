@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Start Ups</title>
+</head>
+<body>
+<a href="/new">create startup!</a>
+<br>
+{% for startup in startups %}
+<br>
+<a href="/{{ startup.id }}/show"> {{ startup.name }} </a> "
+<br>
+<a href="/{{ startup.id }}/edit"> edit</a>
+<a href="/{{ startup.id }}/delete"> delete </a>
+<br><br>
+{% endfor %}
+</body>
+</html>

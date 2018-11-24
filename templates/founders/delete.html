@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Delete Startup</title>
+</head>
+<body>
+<form method='POST' enctype='multipart/form-data' action='/{{ startup.id }}/founders/{{ founder.id }}/delete'>
+    <label>Are you sure you want to delete {{ founder.name }} from {{ startup.name }} ?</label>
+    <button type='submit'> delete</button>
+</form>
+</body>
+</html>

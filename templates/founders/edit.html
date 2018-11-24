@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit Founder</title>
+</head>
+<body>
+<form method='POST' enctype='multipart/form-data' action='/{{ startup.id }}/founders/{{ founder.id }}/edit'>
+    <input type='text' name='name' value='{{ founder.name }}' placeholder='name'/>
+    <input type='text' name='bio' value='{{ founder.bio }}' placeholder='bio'/>
+    <button type='submit'> edit</button>
+</form>
+</body>
+</html>
